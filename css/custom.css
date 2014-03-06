@@ -7,10 +7,27 @@ Website Name: Portfolio site mobile
 Description: custom css file
  */
 
+/* custom google font */
+body, input, select, textarea, button, .ui-btn
+{
+	 font-family: 'Courgette' !important;
+}
 
-
+/* keeps the logo scaled properly */
 #logo
 {
 	width: 35%;
 	max-width: 150px;
 }
+
+#projectsButton, #servicesButton
+{
+	width: 49%;
+	max-width: 150px;
+}
+
+#frogGame, #mathGame, #txtGame
+{
+	width: 80%;
+}
+

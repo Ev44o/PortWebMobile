@@ -4,15 +4,14 @@ File Name: index.html
 Author: Evan P. 200198596
 Website Name: Portfolio site mobile
 Description: http://webdesign4.georgianc.on.ca/~200198596/comp2068/proj1/index.html
-			This is the main index file for the site.
-
+This is the main index file for the site.
 -->
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<!-- load the stylesheets and javascript -->
+<!-- stylesheets and javascript -->
 		<!-- themeroller + jquery css -->
 		<link rel="stylesheet" href="themes/themeRoller.min.css" />
 		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
@@ -20,65 +19,51 @@ Description: http://webdesign4.georgianc.on.ca/~200198596/comp2068/proj1/index.h
 		<!-- jquery + mobile -->
 		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
-		<!-- custom css and font -->
+		<!-- image slider 'touchwipe v1.1.1' from http://www.netcu.de/jquery-touchwipe-iphone-ipad-library -->
+		<script src="js/jquery.touchwipe.min.js"></script>
+		<!-- custom css and google font -->
 		<link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/custom.css" />
 
 		<title>Welcome</title>
-
-		<div data-role="page" id="home">
+<!-- home page -->
+		<div data-role="page" id="homePage">
 			<div data-role="header" data-theme="a" align="center">
 
 				<!-- link to the home page using the logo -->
 				<div >
-					<a href="#home" ><img id="logo" src="img/logo75.png" alt="Arrowhead Arts Logo" ></a>
+					<a href="#homePage" ><img id="logo" src="img/logo75.png" alt="Arrowhead Arts Logo" ></a>
 				</div>
-				
+
 				<h1>Portfolio Site</h1>
 
 			</div>
 			<div data-role="navbar">
 				<ul>
 					<li>
-						<a href="#home" class="ui-btn-active ui-state-persist" data-theme="a" data-icon="home">Home</a>
+						<a href="#homePage" class="ui-btn-active ui-state-persist" data-theme="a" data-icon="home">Home</a>
 					</li>
 					<li>
-						<a href="#about" data-theme="a" data-icon="gear">About</a>
+						<a href="#aboutPage" data-theme="a" data-icon="gear">About</a>
 					</li>
 					<li>
-						<a href="#contact" data-theme="a" data-icon="info">Contact</a>
+						<a href="#contactPage" data-theme="a" data-icon="info">Contact</a>
 					</li>
 				</ul>
 			</div>
-			<section role="main" class="ui-content">
-				<!-- mission statement -->
-				<p>
-					There is a never ending source of knowledge at everyones fingertips when using a computer. I enjoy the fact that I can create anything I want. I can be imaginative and reach out to people with the use of various digital mediums. With the vast amount of people connected by the internet, there are always opportunities to meet new people and learn new things. I enjoy learning, especially on my own time for mini projects.
-				</p>
-				<!-- more information button, featured work, connect -->
-				<div id="featConn" class="row">
-					<div>
-						<a href=#projects>More!</a>
-					</div>
-					<div>
-						<p>
-							featured work
-						</p>
-					</div>
-					<div>
-						<p>
-							stay connected
-						</p>
-					</div>
-				</div>
+			<section data-role="main" >
+
+				<a href="#projectsPage" ><img id="projectsButton" src="img/projects.png" alt="Projects Button" ></a>
+				<a href="#servicesPage" ><img id="servicesButton" src="img/services.png" alt="Services Button" ></a>
+
 			</section>
 			<!-- Footer -includes copyright -->
 			<div data-role="footer" data-theme="a" data-position="fixed">
 				<h4>Copyright Evan P. 2014</h4>
 			</div>
 		</div>
-
-		<div data-role="page" id="about">
+<!-- about page -->
+		<div data-role="page" id="aboutPage">
 			<div data-role="header" data-theme="a">
 				<!-- back button -->
 				<a href="#"  class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all" data-rel=back ></a>
@@ -88,13 +73,13 @@ Description: http://webdesign4.georgianc.on.ca/~200198596/comp2068/proj1/index.h
 			<div data-role="navbar">
 				<ul>
 					<li>
-						<a href="#home" data-theme="a" data-icon="home">Home</a>
+						<a href="#homePage" data-theme="a" data-icon="home">Home</a>
 					</li>
 					<li>
-						<a href="#about" class="ui-btn-active ui-state-persist" data-theme="a" data-icon="gear">About</a>
+						<a href="#aboutPage" class="ui-btn-active ui-state-persist" data-theme="a" data-icon="gear">About</a>
 					</li>
 					<li>
-						<a href="#contact" data-theme="a" data-icon="info">Contact</a>
+						<a href="#contactPage" data-theme="a" data-icon="info">Contact</a>
 					</li>
 				</ul>
 			</div>
@@ -107,8 +92,8 @@ Description: http://webdesign4.georgianc.on.ca/~200198596/comp2068/proj1/index.h
 				<h4>Copyright Evan P. 2014</h4>
 			</div>
 		</div>
-
-		<div data-role="page" id="contact">
+<!-- contact page -->
+		<div data-role="page" id="contactPage">
 			<div data-role="header" data-theme="a">
 				<!-- back button -->
 				<a href="#"  class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all" data-rel=back ></a>
@@ -118,15 +103,62 @@ Description: http://webdesign4.georgianc.on.ca/~200198596/comp2068/proj1/index.h
 			<div data-role="navbar">
 				<ul>
 					<li>
-						<a href="#home" data-theme="a" data-icon="home">Home</a>
+						<a href="#homePage" data-theme="a" data-icon="home">Home</a>
 					</li>
 					<li>
-						<a href="#about" data-theme="a" data-icon="gear">About</a>
+						<a href="#aboutPage" data-theme="a" data-icon="gear">About</a>
 					</li>
 					<li>
-						<a href="#contact" class="ui-btn-active ui-state-persist" data-theme="a" data-icon="info">Contact</a>
+						<a href="#contactPage" class="ui-btn-active ui-state-persist" data-theme="a" data-icon="info">Contact</a>
 					</li>
 				</ul>
+			</div>
+			<section role="main" class="ui-content">
+				<!--  -->
+
+			</section>
+			<!-- Footer -includes copyright -->
+			<div data-role="footer" data-theme="a" data-position="fixed">
+				<h4>Copyright Evan P. 2014</h4>
+			</div>
+		</div>
+<!-- projects page -->
+		<div data-role="page" id="projectsPage">
+			<div data-role="header" data-theme="a">
+				<!-- back button -->
+				<a href="#"  class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all" data-rel=back ></a>
+				<h1>Portfolio Site</h1>
+
+			</div>
+			<section role="main" class="ui-content">
+				<!-- projects section -->
+				<div id="projects">
+					<p>
+						Sidescroll game using python:
+						<a href="https://github.com/Ev44o/PythonAssignment4"> <img id="frogGame" src="img/frogEscape.jpg" alt="Frog escape game"> </a>
+					</p>
+					<p>
+						Math game for android group project:
+						<a href="https://github.com/Nyaxite/ProjectTwo"> <img id="mathGame" src="img/math_splashscreen.png" alt="Math android game"> </a>
+					</p>
+					<p>
+						Text based evolution game:
+						<a href="https://github.com/Ev44o/PythonAssignment1"> <img id="txtGame" src="img/txtbasedgame.jpg" alt="text based game"> </a>
+					</p>
+				</div>
+			</section>
+			<!-- Footer -includes copyright -->
+			<div data-role="footer" data-theme="a" data-position="fixed">
+				<h4>Copyright Evan P. 2014</h4>
+			</div>
+		</div>
+<!-- services page -->
+		<div data-role="page" id="servicesPage">
+			<div data-role="header" data-theme="a">
+				<!-- back button -->
+				<a href="#"  class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all" data-rel=back ></a>
+				<h1>Portfolio Site</h1>
+
 			</div>
 			<section role="main" class="ui-content">
 				<!--  -->
