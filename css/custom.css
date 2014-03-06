@@ -1,53 +1,16 @@
 @charset "UTF-8";
 
-/*custom.css
- Evan P.
+/*
+File Name: custom.css
+Author: Evan P. 200198596
+Website Name: Portfolio site mobile
+Description: custom css file
  */
 
-body
-{
-	padding: 5% 5%;
-}
 
-nav
-{
-	background-color: white;
-}
 
-.homehead
+#logo
 {
-	padding-top: 5%;
-}
-
-.sbutton
-{
-	color: black;
-	padding: 2px;
-	border: 1px solid #CCCCCC;
-	background-color: #55AC37;
-}
-
-.outline
-{
-	border: 1px solid black;
-}
-
-/* this styles the selected 
- * navigation link so that you 
- * know what page you are on */
-body#home a#homenav,
-body#about a#aboutnav,
-body#projects a#projnav,
-body#services a#servnav,
-body#github a#gitnav,
-body#contact a#contnav
-{
-	color: white;
-	background-color: black;
-	border-radius: 1em 2em 1em 2em;
-	padding: 2px;
-}
-.copyright
-{
-	font-style:italic;
+	width: 35%;
+	max-width: 150px;
 }

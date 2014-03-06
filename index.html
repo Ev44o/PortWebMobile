@@ -1,31 +1,41 @@
 <!doctype html>
-<!--index.html
-Evan P.
-http://webdesign4.georgianc.on.ca/~200198596/comp2068/assign1/index.php
+<!--
+File Name: index.html
+Author: Evan P. 200198596
+Website Name: Portfolio site mobile
+Description: http://webdesign4.georgianc.on.ca/~200198596/comp2068/proj1/index.html
+			This is the main index file for the site.
+
 -->
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-
-		<!-- load the stylesheets and javascript -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+		<!-- load the stylesheets and javascript -->
+		<!-- themeroller + jquery css -->
 		<link rel="stylesheet" href="themes/themeRoller.min.css" />
 		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile.structure-1.4.1.min.css" />
+		<!-- jquery + mobile -->
 		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
+		<!-- custom css and font -->
+		<link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/custom.css" />
 
 		<title>Welcome</title>
 
 		<div data-role="page" id="home">
-			<div data-role="header" data-theme="a">
-				
-				<div align="center" ><!-- link to the home page using the logo -->
-					<a href="#home" > <img id="logo" src="img/logo75.png" alt="Arrowhead Arts Logo" > </a>
+			<div data-role="header" data-theme="a" align="center">
+
+				<!-- link to the home page using the logo -->
+				<div >
+					<a href="#home" ><img id="logo" src="img/logo75.png" alt="Arrowhead Arts Logo" ></a>
 				</div>
 				
 				<h1>Portfolio Site</h1>
+
 			</div>
 			<div data-role="navbar">
 				<ul>
@@ -33,7 +43,7 @@ http://webdesign4.georgianc.on.ca/~200198596/comp2068/assign1/index.php
 						<a href="#home" class="ui-btn-active ui-state-persist" data-theme="a" data-icon="home">Home</a>
 					</li>
 					<li>
-						<a href="#about" data-theme="a" data-icon="gear">About Me</a>
+						<a href="#about" data-theme="a" data-icon="gear">About</a>
 					</li>
 					<li>
 						<a href="#contact" data-theme="a" data-icon="info">Contact</a>
@@ -64,13 +74,16 @@ http://webdesign4.georgianc.on.ca/~200198596/comp2068/assign1/index.php
 			</section>
 			<!-- Footer -includes copyright -->
 			<div data-role="footer" data-theme="a" data-position="fixed">
-				<h4>Copyright 2014</h4>
+				<h4>Copyright Evan P. 2014</h4>
 			</div>
 		</div>
-		
+
 		<div data-role="page" id="about">
 			<div data-role="header" data-theme="a">
+				<!-- back button -->
+				<a href="#"  class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all" data-rel=back ></a>
 				<h1>Portfolio Site</h1>
+
 			</div>
 			<div data-role="navbar">
 				<ul>
@@ -78,7 +91,7 @@ http://webdesign4.georgianc.on.ca/~200198596/comp2068/assign1/index.php
 						<a href="#home" data-theme="a" data-icon="home">Home</a>
 					</li>
 					<li>
-						<a href="#about" class="ui-btn-active ui-state-persist" data-theme="a" data-icon="gear">About Me</a>
+						<a href="#about" class="ui-btn-active ui-state-persist" data-theme="a" data-icon="gear">About</a>
 					</li>
 					<li>
 						<a href="#contact" data-theme="a" data-icon="info">Contact</a>
@@ -86,19 +99,20 @@ http://webdesign4.georgianc.on.ca/~200198596/comp2068/assign1/index.php
 				</ul>
 			</div>
 			<section role="main" class="ui-content">
-				<!-- back button -->
-				<a href="#"  class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all" data-rel=back ></a>
 				<!--  -->
-				
+
 			</section>
 			<!-- Footer -includes copyright -->
 			<div data-role="footer" data-theme="a" data-position="fixed">
-				<h4>Copyright 2014</h4>
+				<h4>Copyright Evan P. 2014</h4>
 			</div>
 		</div>
-		
+
 		<div data-role="page" id="contact">
 			<div data-role="header" data-theme="a">
+				<!-- back button -->
+				<a href="#"  class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all" data-rel=back ></a>
+
 				<h1>Portfolio Site</h1>
 			</div>
 			<div data-role="navbar">
@@ -107,7 +121,7 @@ http://webdesign4.georgianc.on.ca/~200198596/comp2068/assign1/index.php
 						<a href="#home" data-theme="a" data-icon="home">Home</a>
 					</li>
 					<li>
-						<a href="#about" data-theme="a" data-icon="gear">About Me</a>
+						<a href="#about" data-theme="a" data-icon="gear">About</a>
 					</li>
 					<li>
 						<a href="#contact" class="ui-btn-active ui-state-persist" data-theme="a" data-icon="info">Contact</a>
@@ -115,10 +129,8 @@ http://webdesign4.georgianc.on.ca/~200198596/comp2068/assign1/index.php
 				</ul>
 			</div>
 			<section role="main" class="ui-content">
-				<!-- back button -->
-				<a href="#"  class="ui-btn ui-icon-arrow-l ui-btn-icon-notext ui-corner-all" data-rel=back ></a>
 				<!--  -->
-				
+
 			</section>
 			<!-- Footer -includes copyright -->
 			<div data-role="footer" data-theme="a" data-position="fixed">
