@@ -11,7 +11,7 @@ This is the main index file for the site.
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- stylesheets and javascript -->
+		<!-- stylesheets and javascript -->
 		<!-- themeroller + jquery css -->
 		<link rel="stylesheet" href="themes/themeRoller.min.css" />
 		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
@@ -20,13 +20,13 @@ This is the main index file for the site.
 		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
 		<!-- image slider 'touchwipe v1.1.1' from http://www.netcu.de/jquery-touchwipe-iphone-ipad-library -->
-		<script src="js/jquery.touchwipe.min.js"></script>
+		<script src="js/jquery.touchwipe.1.1.1.js"></script>
 		<!-- custom css and google font -->
 		<link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/custom.css" />
 
 		<title>Welcome</title>
-<!-- home page -->
+		<!-- home page -->
 		<div data-role="page" id="homePage">
 			<div data-role="header" data-theme="a" align="center">
 
@@ -51,10 +51,49 @@ This is the main index file for the site.
 					</li>
 				</ul>
 			</div>
-			<section data-role="main" >
+			<section data-role="main" data-type="horizontal" >
 
-				<a href="#projectsPage" ><img id="projectsButton" src="img/projects.png" alt="Projects Button" ></a>
-				<a href="#servicesPage" ><img id="servicesButton" src="img/services.png" alt="Services Button" ></a>
+				<div id="center" >
+					<div>
+						<a href="#projectsPage" class="ui-btn ui-btn-inline" >Projects</a>
+						<a href="#servicesPage" class="ui-btn ui-btn-inline" >Services</a>
+					</div>
+
+					<div>
+						<div id="imagegallery" >
+							<img id="sliderFrogGame" src="img/frogEscape.jpg" alt="Frog escape game">
+							<img id="sliderMathGame" src="img/math_splashscreen.png" alt="Math android game">
+							<img id="sliderTxtGame" src="img/txtbasedgame.jpg" alt="text based game">
+						</div>
+
+						<div>
+							<a id="prev" href="#prev">Previous</a>
+							<a id="next" href="#next">Next</a>
+							<script type="text/javascript">
+								$(document).ready(function() {
+									$('#imagegallery').cycle({
+										timeout : 0,
+										fx : 'scrollHorz',
+										next : '#next',
+										prev : '#prev'
+									});
+									$("#imagegallery").touchwipe({
+										wipeLeft : function() {
+											$("#imagegallery").cycle("next");
+										},
+										wipeRight : function() {
+											$("#imagegallery").cycle("prev");
+										}
+									});
+								});
+
+							</script>
+						</div>
+						<div> <!-- link to desktop site -->
+							<a href="http://webdesign4.georgianc.on.ca/~200198596/comp2068/assign1/index.php" class="ui-btn ui-btn-inline" > Desktop Site</a>
+						</div>
+					</div>
+				</div>
 
 			</section>
 			<!-- Footer -includes copyright -->
@@ -62,7 +101,7 @@ This is the main index file for the site.
 				<h4>Copyright Evan P. 2014</h4>
 			</div>
 		</div>
-<!-- about page -->
+		<!-- about page -->
 		<div data-role="page" id="aboutPage">
 			<div data-role="header" data-theme="a">
 				<!-- back button -->
@@ -84,15 +123,19 @@ This is the main index file for the site.
 				</ul>
 			</div>
 			<section role="main" class="ui-content">
-				<!--  -->
-
+				<!-- Tagline -->
+				<h2>Who am I?</h2>
+				<p>I am at heart a desktop programmer. I enjoy working with strict programming languages like java and C++. </p>
+				<!-- Mission statement -->
+				<h2>Mission!</h2>
+				<p>There is a never ending source of knowledge at everyones fingertips when using a computer. I enjoy the fact that I can create anything I want. I can be imaginative and reach out to people with the use of various digital mediums. With the vast amount of people connected by the internet, there are always opportunities to meet new people and learn new things. I enjoy learning, especially on my own time for mini projects.</p> 
 			</section>
 			<!-- Footer -includes copyright -->
 			<div data-role="footer" data-theme="a" data-position="fixed">
 				<h4>Copyright Evan P. 2014</h4>
 			</div>
 		</div>
-<!-- contact page -->
+		<!-- contact page -->
 		<div data-role="page" id="contactPage">
 			<div data-role="header" data-theme="a">
 				<!-- back button -->
@@ -114,15 +157,21 @@ This is the main index file for the site.
 				</ul>
 			</div>
 			<section role="main" class="ui-content">
-				<!--  -->
-
+				<!-- Contact page content! -->
+				<h2>Click the email button to contact me!</h2>
+				<a href="mailto:200198596@student.georgianc.on.ca" class="ui-btn ui-btn-inline" >Email!</a>
+				
+				<h2>Address</h2>
+				1 Georgian Drive,
+				Barrie, Ontario
+				Canada
 			</section>
 			<!-- Footer -includes copyright -->
 			<div data-role="footer" data-theme="a" data-position="fixed">
 				<h4>Copyright Evan P. 2014</h4>
 			</div>
 		</div>
-<!-- projects page -->
+		<!-- projects page -->
 		<div data-role="page" id="projectsPage">
 			<div data-role="header" data-theme="a">
 				<!-- back button -->
@@ -152,7 +201,7 @@ This is the main index file for the site.
 				<h4>Copyright Evan P. 2014</h4>
 			</div>
 		</div>
-<!-- services page -->
+		<!-- services page -->
 		<div data-role="page" id="servicesPage">
 			<div data-role="header" data-theme="a">
 				<!-- back button -->

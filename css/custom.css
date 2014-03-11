@@ -20,10 +20,53 @@ body, input, select, textarea, button, .ui-btn
 	max-width: 150px;
 }
 
-#projectsButton, #servicesButton
+#imagegallery
 {
-	width: 49%;
-	max-width: 150px;
+	border: 1px solid black;
+	width: 300px;
+	height: 300px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+#sliderFrogGame
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+	z-index: 4;
+	opacity: 1;
+	width:inherit;
+}
+
+#sliderMathGame
+{
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: -400px;
+	z-index: 3;
+	opacity: 1;
+	width:inherit;
+}
+
+#sliderTxtGame
+{
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: -400px;
+	z-index: 3;
+	opacity: 1;
+	width:inherit;
+}
+
+#center
+{
+	text-align:center;
 }
 
 #frogGame, #mathGame, #txtGame
